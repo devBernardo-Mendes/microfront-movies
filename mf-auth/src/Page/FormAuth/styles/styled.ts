@@ -29,6 +29,6 @@ export const LogoSC = styled.ul`
   margin-bottom: 30px;
 
   > h2 {
-    color: #000;
+    color: #000000;
   }
 `;

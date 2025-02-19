@@ -1,0 +1,76 @@
+import styled from "styled-components";
+
+export const ContainerSC = styled.div`
+  grid-area: AS;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 0.063rem solid #bfbfbf;
+  padding-left: 20px;
+  background-color: #f4f4f4;
+
+  height: 100vh;
+`;
+
+export const HeaderSC = styled.header`
+  display: flex;
+  align-items: center;
+  height: 70px;
+`;
+
+export const LogImgSC = styled.img`
+  height: 40px;
+  width: 40px;
+`;
+
+export const TitleSC = styled.h1`
+  color: #000000;
+  margin-left: 10px;
+`;
+
+export const MenuContainerSC = styled.nav`
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 50px;
+`;
+
+export const MenuIntemLinkSC = styled.a`
+  color: #000000;
+  text-decoration: none;
+  margin: 7px 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  > svg {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+`;
+
+export const MenuIntemLinkExitSC = styled.a`
+  color: #000000;
+  text-decoration: none;
+  margin: 7px 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+
+  margin-top: auto;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  > svg {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+`;

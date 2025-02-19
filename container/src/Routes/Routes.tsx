@@ -9,7 +9,7 @@ const AppRoutes = () => (
   <Suspense fallback={<div>Carregando...</div>}>
     <Routes>
       <Route path="/list" element={<List />} />
-      <Route path="/details" element={<Details />} />
+      <Route path="/details/:id" element={<Details />} />
       <Route path="/auth" element={<Auth />} />
     </Routes>
   </Suspense>

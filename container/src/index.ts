@@ -21,4 +21,10 @@ html, body, #rooot {
 button {
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
 `;

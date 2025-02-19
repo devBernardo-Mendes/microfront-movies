@@ -1,5 +1,5 @@
-const List = () => {
-  return <h2>Lista de Filmes</h2>;
-};
+import ListContent from "./page";
 
-export default List;
+export default function List() {
+  return <ListContent />;
+}

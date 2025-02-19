@@ -1,5 +1,5 @@
-const Details = () => {
-  return <h2>Detalhes do Filme</h2>;
-};
+import PageDetails from "./Page";
 
-export default Details;
+export default function Details() {
+  return <PageDetails />;
+}
