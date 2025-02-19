@@ -33,7 +33,8 @@ A aplicação é dividida em microfrontends para modularização e separação d
 ### 2. Instalar Dependências 
 
 ```bash
-npm install  # ou yarn install 
+npm install  # ou yarn install
+
 
 ### 3. Rodar Cada Microfrontend
 
