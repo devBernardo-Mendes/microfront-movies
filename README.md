@@ -32,7 +32,8 @@ A aplicação é dividida em microfrontends para modularização e separação d
 
 ### 2. Instalar Dependências 
 
-npm install  # ou yarn install
+```bash
+npm install  # ou yarn install 
 
 ### 3. Rodar Cada Microfrontend
 
@@ -43,6 +44,5 @@ npm start  # ou yarn start
 REACT_APP_TMDB_API_KEY=your_api_key_here
 
 
-```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
