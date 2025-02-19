@@ -9,13 +9,21 @@ export default function useAuth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
+    if (password !== confirmPassword) {
+      setError("As senhas não coincidem!");
+      return;
+    }
+
     const username = user;
     login(username);
-    navigate("/");
+    navigate("/list");
+    setError("");
   };
 
   return {
@@ -23,8 +31,11 @@ export default function useAuth() {
     setPassword,
     setUser,
     handleSubmit,
+    setConfirmPassword,
     user,
     email,
     password,
+    confirmPassword,
+    error,
   };
 }
