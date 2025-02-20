@@ -47,3 +47,4 @@ REACT_APP_TMDB_API_KEY=your_api_key_here
 
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
+http://localhost:3000/auth
