@@ -8,7 +8,7 @@ Este repositório contém uma aplicação web modularizada utilizando o conceito
 - **TypeScript** para garantir tipagem e segurança no código.
 - **Module Federation (Webpack)** para a divisão e integração dos microfrontends.
 - **Styled-Components** para estilização e responsividade.
-- **Axios para chamadas HTTP.
+- **Axios para chamadas** HTTP.
 
 ## Estrutura da Aplicação
 
