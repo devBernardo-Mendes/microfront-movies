@@ -28,6 +28,7 @@ export const TitleSC = styled.h1`
     font-size: 2rem;
   }
 `;
+
 export const ProfileSC = styled.div`
   display: flex;
   align-items: center;
