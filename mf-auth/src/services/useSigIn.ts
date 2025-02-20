@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
+import { IUser } from "../hooks/types";
 
 const STORAGE_KEY = "user_auth";
 
-interface User {
-  name: string;
-}
-
 export function useSigIn() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<IUser | null>(null);
 
   useEffect(() => {
     const storedUser = localStorage.getItem(STORAGE_KEY);
