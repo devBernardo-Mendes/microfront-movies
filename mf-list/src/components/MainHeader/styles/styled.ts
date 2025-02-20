@@ -13,7 +13,7 @@ export const ContainerSC = styled.div`
   border-bottom: 0.063rem solid #bfbfbf;
 `;
 
-export const TitleSC = styled.h1`
+export const TitleSC = styled.h2`
   color: #222;
   font-size: 2.5rem;
   font-weight: 700;
@@ -34,7 +34,7 @@ export const ProfileSC = styled.div`
   color: #000000;
 `;
 
-export const WelcomeSC = styled.h3``;
+export const WelcomeSC = styled.h1``;
 
 export const UserNameSC = styled.span`
   margin-left: 5px;

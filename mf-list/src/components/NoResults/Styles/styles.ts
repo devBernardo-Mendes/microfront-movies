@@ -16,6 +16,20 @@ export const Content = styled.div`
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 1200px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 export const ImageContainer = styled.div`

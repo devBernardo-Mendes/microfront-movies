@@ -13,7 +13,7 @@ export default function NoResult() {
     <Container>
       <Content>
         <ImageContainer>
-          <img src={emptySearch} alt="No Results" />
+          <img src={emptySearch} alt="No Results" loading="lazy" />
         </ImageContainer>
         <TextContainer>
           <Title>Nenhum Resultado Encontrado</Title>
