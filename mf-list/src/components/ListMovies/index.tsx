@@ -1,5 +1,5 @@
 import useGetMovies from "../../services/useGetMovies";
-import { IMove } from "../../hooks/types";
+import { IMovie } from "../../hooks/types";
 import { Content, ListUl } from "./Styles/styled";
 import MovieCard from "../MovieCard";
 import Input from "../Input";
@@ -18,7 +18,7 @@ export default function ListMovies() {
       />
       {data && data.length > 0 && (
         <ListUl>
-          {data.map((item: IMove) => (
+          {data.map((item: IMovie) => (
             <MovieCard movie={item} key={item.id} />
           ))}
         </ListUl>
