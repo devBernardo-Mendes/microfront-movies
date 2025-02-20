@@ -12,7 +12,7 @@ export default function MainHeader() {
 
   return (
     <ContainerSC>
-      <TitleSC>Filmes em Alta</TitleSC>
+      <TitleSC>BuscaCine</TitleSC>
 
       <ProfileSC>
         <WelcomeSC>Olá, </WelcomeSC>

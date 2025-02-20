@@ -18,16 +18,10 @@ interface IProps {
 }
 
 export default function MovieCard({ movie }: IProps) {
-  function formatDate(dateString: string): string {
-    const date = new Date(dateString);
-    if (isNaN(date.getTime())) {
-      throw new Error("Data inválida");
-    }
-    return date.toLocaleDateString("pt-BR");
-  }
-  const { redirectToDetails } = useList();
+  const { redirectToDetails, formatDate } = useList();
+
   return (
-    <ItemLi>
+    <ItemLi onClick={() => redirectToDetails(movie.id)}>
       <MoviePoster>
         <ImageMovie
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -37,7 +31,9 @@ export default function MovieCard({ movie }: IProps) {
       <MovieInfos>
         <ItemTitle>{movie.title}</ItemTitle>
         <ReleaseDate className="color: #fff">
-          {formatDate(movie.release_date)}
+          {movie?.release_date
+            ? formatDate(movie?.release_date)
+            : "Data de lançamento não encontrada"}
         </ReleaseDate>
         <StarRating rating={movie.vote_average} />
         <HidderContent>

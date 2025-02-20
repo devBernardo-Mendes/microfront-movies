@@ -1,9 +1,14 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 
-export default function useGetMovies(searchTerm: string) {
+export default function useGetMovies() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
 
   const getMovie = useCallback(async () => {
     setIsLoading(true);
@@ -39,5 +44,7 @@ export default function useGetMovies(searchTerm: string) {
   return {
     data,
     isLoading,
+    handleSearchChange,
+    searchTerm,
   };
 }

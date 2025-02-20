@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { IMovie } from "../hooks/types";
 
 export default function useDetailsMovie() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<IMovie | null>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const { id } = useParams<{ id: string }>();

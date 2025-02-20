@@ -14,7 +14,19 @@ export const ContainerSC = styled.div`
 `;
 
 export const TitleSC = styled.h1`
-  color: #000000;
+  color: #222;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 export const ProfileSC = styled.div`
   display: flex;

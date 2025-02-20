@@ -1,3 +1,5 @@
+import { IMovie } from "../../hooks/types";
+import useDetails from "../../hooks/useDetails";
 import StarRating from "../StarRating";
 import {
   Container,
@@ -12,32 +14,11 @@ import {
   Runtime,
 } from "./styles/styled";
 
-interface Genre {
-  id: number;
-  name: string;
-}
-
-interface IProps {
-  movie: {
-    poster_path: string;
-    title: string;
-    overview: string;
-    vote_average: number;
-    genres: Genre[];
-    runtime: number;
-  };
-}
-
-export default function CardDetails({ movie }: IProps) {
+export default function CardDetails({ movie }: IMovie) {
+  const { formatRuntime } = useDetails();
   if (!movie || !movie.genres) {
     return <p>Carregando...</p>;
   }
-
-  const formatRuntime = (runtime: number) => {
-    const hours = Math.floor(runtime / 60);
-    const minutes = runtime % 60;
-    return `${hours}h ${minutes}min`;
-  };
 
   return (
     <Container>

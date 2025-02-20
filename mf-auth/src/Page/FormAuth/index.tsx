@@ -21,6 +21,7 @@ export default function FormAuth() {
       <FormSC onSubmit={handleSubmit}>
         <TitleSC>Entrar</TitleSC>
         <Input
+          name="name"
           placeholder="Nome"
           type="text"
           value={user}
@@ -28,6 +29,7 @@ export default function FormAuth() {
           required
         />
         <Input
+          name="email"
           placeholder="E-mail"
           type="email"
           value={email}
@@ -35,6 +37,7 @@ export default function FormAuth() {
           required
         />
         <Input
+          name="password"
           placeholder="Senha"
           type="password"
           value={password}
@@ -42,6 +45,7 @@ export default function FormAuth() {
           required
         />
         <Input
+          name="confirmPassword"
           placeholder="Confirma Senha"
           type="password"
           value={confirmPassword}

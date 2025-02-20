@@ -8,8 +8,14 @@ export default function useList() {
     navigate(`/details/${id}`);
   };
 
+  function formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    return date?.toLocaleDateString("pt-BR");
+  }
+
   return {
     getUserName,
     redirectToDetails,
+    formatDate,
   };
 }

@@ -3,21 +3,15 @@ import { IMove } from "../../hooks/types";
 import { Content, ListUl } from "./Styles/styled";
 import MovieCard from "../MovieCard";
 import Input from "../Input";
-import { useState } from "react";
 import NoResult from "../NoResults";
 
 export default function ListMovies() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  };
-  const { data } = useGetMovies(searchTerm);
-
-  if (!data) return null;
+  const { data, handleSearchChange, searchTerm } = useGetMovies();
 
   return (
     <>
       <Input
+        name="search"
         placeholder="Pesquisar Filme"
         value={searchTerm}
         onChange={handleSearchChange}
