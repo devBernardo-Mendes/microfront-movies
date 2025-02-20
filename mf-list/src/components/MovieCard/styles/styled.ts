@@ -70,3 +70,9 @@ export const Button = styled.button`
 
   width: 100%;
 `;
+
+export const ReleaseDate = styled.div`
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 8px;
+`;

@@ -10,6 +10,7 @@ import {
   ItemTitle,
   MovieInfos,
   MoviePoster,
+  ReleaseDate,
 } from "./styles/styled";
 
 interface IProps {
@@ -17,6 +18,13 @@ interface IProps {
 }
 
 export default function MovieCard({ movie }: IProps) {
+  function formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) {
+      throw new Error("Data inválida");
+    }
+    return date.toLocaleDateString("pt-BR");
+  }
   const { redirectToDetails } = useList();
   return (
     <ItemLi>
@@ -28,6 +36,9 @@ export default function MovieCard({ movie }: IProps) {
       </MoviePoster>
       <MovieInfos>
         <ItemTitle>{movie.title}</ItemTitle>
+        <ReleaseDate className="color: #fff">
+          {formatDate(movie.release_date)}
+        </ReleaseDate>
         <StarRating rating={movie.vote_average} />
         <HidderContent>
           {movie.overview && (

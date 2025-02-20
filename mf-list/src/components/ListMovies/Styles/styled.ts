@@ -8,3 +8,7 @@ export const ListUl = styled.ul`
   width: 100%;
   padding: 24px 3%;
 `;
+
+export const Content = styled.div`
+  margin-top: 4rem;
+`;

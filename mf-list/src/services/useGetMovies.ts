@@ -1,20 +1,21 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 
-export default function useGetMovies() {
+export default function useGetMovies(searchTerm: string) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  
 
   const getMovie = useCallback(async () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/now_playing",
+        "https://api.themoviedb.org/3/search/movie",
         {
           params: {
             api_key: "773d8153588fbfa77134545c40c8f569",
             language: "pt-BR",
+            query: searchTerm,
+            page: 1,
           },
         }
       );
@@ -25,11 +26,15 @@ export default function useGetMovies() {
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [searchTerm]);
 
   useEffect(() => {
-    getMovie();
-  }, [getMovie]);
+    if (searchTerm) {
+      getMovie();
+    } else {
+      getMovie();
+    }
+  }, [getMovie, searchTerm]);
 
   return {
     data,

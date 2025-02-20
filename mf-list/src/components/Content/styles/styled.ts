@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerSC = styled.div`
   grid-area: CT;
   color: #000000;
+  
 
   background-color: #e0e0e0;
   padding: 25px;
