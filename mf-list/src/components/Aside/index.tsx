@@ -7,12 +7,14 @@ import {
   MenuIntemLinkSC,
   TitleSC,
 } from "./Styles/styled";
+import { IoMdMenu } from "react-icons/io";
 
 export default function Aside() {
   return (
     <ContainerSC>
       <HeaderSC>
         <TitleSC>Menu</TitleSC>
+        <IoMdMenu size={24} />
       </HeaderSC>
 
       <MenuContainerSC>
